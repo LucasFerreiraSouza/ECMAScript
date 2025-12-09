@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>Estrangeiro ou Brasileiro</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: navy; 
+            font: normal 18pt Verdana;
+        }
+        h1{
+            color: darkblue;
+        }   
+        input{
+            font: normal 16pt Verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em que país você nasceu?</h1>
+    <p><input type="text" id ="inserir"></p>
+    <button id="verificar" >verificar</button>
+    <div id="resposta"></div>
+
+    <script>
+        var verificar = document.querySelector("button#verificar")
+        var resposta = document.querySelector("div#resposta")
+
+        verificar.addEventListener("click", checar)
+
+        function checar(){
+            var inserir = document.querySelector("input#inserir")
+            var pais = inserir.value
+            if (pais === "Brasil") {
+                resposta.innerHTML = "Você é Brasileiro!"
+            } else {
+                resposta.innerHTML = "Você é Estrangeiro!"
+            }
+        }
+    </script>
+</body>
+</html>
