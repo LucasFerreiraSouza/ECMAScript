@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentran</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: navy; 
+            font: normal 18pt Verdana;
+        }
+        h1{
+            color: darkblue;
+        }   
+        input{
+            font: normal 16pt Verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <p>Velocidade do carro <input type="number" id="velocidade"></p>
+    <input type="button" id="verificar" value="Verificar">
+    <div id="resposta"></div>
+
+    <script>
+        var velocidade = document.querySelector("input#verificar")
+
+        velocidade.addEventListener("click", verificar)
+
+        var resposta = document.querySelector("div#resposta")
+
+        function verificar(){
+            var velocidade = document.querySelector("input#velocidade")
+            var vel = Number(velocidade.value)
+            if (vel > 60) {
+                resposta.innerHTML = `<strong>MULTADO!</strong> Você excedeu o limite de velocidade permitida que é de 60 km/h`
+            }
+            resposta.innerHTML += `<p>Sua velocidade é de ${vel} km/h</p>`
+        }
+    </script>
+    
+</body>
+</html>
