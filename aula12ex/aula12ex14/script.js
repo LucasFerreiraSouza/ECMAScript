@@ -20,15 +20,18 @@ function atualizarPagina(){
         //Bom dia
         mensagem.innerHTML = 'Bom dia!';
         imagem.innerHTML = '<img src="https://minecraftsix.com/wp-content/uploads/2015/01/yshaders-2.jpg"/>';
+        document.body.style.background = '#ffffffff';
     }
     else if (hora >= 12 && hora < 18){
         //Boa tarde
         mensagem.innerHTML = 'Boa tarde!';
         imagem.innerHTML = '<img src="https://i.ytimg.com/vi/_h5Vf9WOp1M/sddefault.jpg"/>';
+        document.body.style.background = '#8d8d8fff';
     } else if (hora >= 18 && hora <= 23){
         //Boa noite
         mensagem.innerHTML = 'Boa noite!';
         imagem.innerHTML = '<img src="https://i.tlauncher.org/images/1588580487-plunderpixels-shaders-6.jpg"/>';
+        document.body.style.background = '#515154';
     }  else {
         mensagem.innerHTML = '';
         imagem.innerHTML = '';
