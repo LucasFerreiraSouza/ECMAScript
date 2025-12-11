@@ -9,7 +9,6 @@ function clicarContar(){
     var inicio = document.getElementById('inicio').value;
     var fim = document.getElementById('fim').value;
     var numero = document.getElementById('numero').value;
-    var multiplicao = 
     
     inicio=Number(inicio)
     fim=Number(fim)
@@ -19,7 +18,7 @@ function clicarContar(){
         tabuada.innerHTML = `Tabuada: </br>`;
         
         for(var i=inicio;i<=fim;i++){
-            tabuada.innerHTML +=` ${numero} x ${i} = ${multiplicao*i} <br>` 
+            tabuada.innerHTML +=` ${numero} x ${i} = ${numero*i} <br>` 
             console.log(tabuada)
         }
     }
