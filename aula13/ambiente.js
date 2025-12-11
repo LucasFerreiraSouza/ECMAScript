@@ -1,18 +1,17 @@
-console.log(`Bora comer uma pizza?`)
+
+console.log(`Bora comer uma pizza de 8 fatias?`)
 
 var pizza = 8
 
 function comerFatia(){
-    pizza -= 1
+    pizza = pizza - 1
 }
-
 
 function comerPizza(){
     while(pizza>0){
         comerFatia()
-        console.log(pizza)
+        console.log(`Fatias: ${pizza}`)
     }
 }
 
 comerPizza()
-
