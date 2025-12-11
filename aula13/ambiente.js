@@ -4,7 +4,7 @@ console.log(`Bora comer uma pizza de 8 fatias?`)
 var pizza = 8
 
 function comerFatia(){
-    pizza = pizza - 1
+    pizza--
 }
 
 function comerPizza(){
@@ -23,7 +23,7 @@ console.log(`Bora comer uma pizza de 8 fatias?`)
 var pizza = 8
 
 function comerFatia(){
-    pizza = pizza - 1
+    pizza--
 }
 
 function comerPizza(){
