@@ -10,16 +10,22 @@ function clicarContar(){
     var fim = document.getElementById('fim').value;
     var passo = document.getElementById('passo').value;
     
+    if (inicio > 0 && fim > 0 && passo > 0){
+        mensagem.innerHTML = ` Início ➡ `
 
-    mensagem.innerHTML = ` Início ➡ `
+        for(var i=Number(inicio);i<=Number(fim);i+=Number(passo)){
+            mensagem.innerHTML +=`${i} `
+        }
 
-    for(var i=Number(inicio);i<=Number(fim);i=i+Number(passo)){
-        mensagem.innerHTML +=`${i} `
+        if(i=fim){
+            mensagem.innerHTML += ` 🏁 Fim `
+        }
     }
-
-    if(i=fim){
-        mensagem.innerHTML += ` 🏁 Fim `
+    else{ 
+        alert(`Dados inválidos!`)
+        mensagem.innerHTML = `Aguardando...`
     }
+    
 }
 
 
