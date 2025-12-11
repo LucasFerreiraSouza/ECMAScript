@@ -20,7 +20,6 @@ function clicarContar(){
     if(i=fim){
         mensagem.innerHTML += ` 🏁 Fim `
     }
-    i=0
 }
 
 
