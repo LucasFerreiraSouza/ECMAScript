@@ -9,12 +9,16 @@ function clicarContar(){
     let inicio = document.getElementById('inicio').value;
     let fim = document.getElementById('fim').value;
     let passo = document.getElementById('passo').value;
+
+    inicio=Number(inicio)
+    fim=Number(fim)
+    passo=Number(passo)
     
     if (inicio < fim && inicio > 0 && fim > 0 && passo > 0){
         //crescente
         mensagem.innerHTML = ` Início ➡ `
 
-        for(let i=Number(inicio);i<=Number(fim);i+=Number(passo)){
+        for(let i=inicio;i<=fim;i+=passo){
             mensagem.innerHTML +=`${i} `
         }
 
@@ -24,7 +28,7 @@ function clicarContar(){
         //decrescente
         mensagem.innerHTML = ` Início ➡ `
 
-        for(let i=Number(inicio);i>=Number(fim);i-=Number(passo)){
+        for(let i=inicio;i>=fim;i-=passo){
             mensagem.innerHTML +=`${i} `
             console.log(i)
         }
