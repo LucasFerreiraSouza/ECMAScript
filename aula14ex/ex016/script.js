@@ -1,25 +1,36 @@
-var contar = document.getElementById('contar');
-var h1 = document.querySelector('h1');
+let contar = document.getElementById('contar');
+let h1 = document.querySelector('h1');
 
 
 contar.addEventListener('click', clicarContar);
 
 function clicarContar(){
-    var mensagem = document.getElementById('mensagem');
-    var inicio = document.getElementById('inicio').value;
-    var fim = document.getElementById('fim').value;
-    var passo = document.getElementById('passo').value;
+    let mensagem = document.getElementById('mensagem');
+    let inicio = document.getElementById('inicio').value;
+    let fim = document.getElementById('fim').value;
+    let passo = document.getElementById('passo').value;
     
-    if (inicio > 0 && fim > 0 && passo > 0){
+    if (inicio < fim && inicio > 0 && fim > 0 && passo > 0){
+        console.log(`crescente`)
         mensagem.innerHTML = ` Início ➡ `
 
-        for(var i=Number(inicio);i<=Number(fim);i+=Number(passo)){
+        for(let i=Number(inicio);i<=Number(fim);i+=Number(passo)){
             mensagem.innerHTML +=`${i} `
         }
 
-        if(i=fim){
-            mensagem.innerHTML += ` 🏁 Fim `
+        mensagem.innerHTML += ` 🏁 Fim `
+    }
+    else if(inicio > fim && inicio > 0 && fim > 0 && passo > 0){
+        console.log(`decrescente`)
+        mensagem.innerHTML = ` Início ➡ `
+
+        for(let i=Number(inicio);i>=Number(fim);i-=Number(passo)){
+            mensagem.innerHTML +=`${i} `
+            console.log(i)
         }
+
+        mensagem.innerHTML += ` 🏁 Fim `
+
     }
     else{ 
         alert(`Dados inválidos!`)

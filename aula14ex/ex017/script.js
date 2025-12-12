@@ -1,14 +1,14 @@
-var contar = document.getElementById('contar');
-var h1 = document.querySelector('h1');
+let contar = document.getElementById('contar');
+let h1 = document.querySelector('h1');
 
 
 contar.addEventListener('click', clicarContar);
 
 function clicarContar(){
-    var tabuada = document.getElementById('tabuada');
-    var inicio = document.getElementById('inicio').value;
-    var fim = document.getElementById('fim').value;
-    var numero = document.getElementById('numero').value;
+    let tabuada = document.getElementById('tabuada');
+    let inicio = document.getElementById('inicio').value;
+    let fim = document.getElementById('fim').value;
+    let numero = document.getElementById('numero').value;
     
     inicio=Number(inicio)
     fim=Number(fim)
@@ -17,7 +17,7 @@ function clicarContar(){
     if (inicio > 0 && fim > 0 && numero > 0){
         tabuada.innerHTML = `Tabuada: </br>`;
         
-        for(var i=inicio;i<=fim;i++){
+        for(let i=inicio;i<=fim;i++){
             tabuada.innerHTML +=` ${numero} x ${i} = ${numero*i} <br>` 
             console.log(tabuada)
         }
