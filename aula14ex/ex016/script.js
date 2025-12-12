@@ -30,7 +30,6 @@ function clicarContar(){
 
         for(let i=inicio;i>=fim;i-=passo){
             mensagem.innerHTML +=`${i} `
-            console.log(i)
         }
 
         mensagem.innerHTML += ` 🏁 Fim `
