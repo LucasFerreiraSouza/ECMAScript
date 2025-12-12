@@ -11,7 +11,7 @@ function clicarContar(){
     let passo = document.getElementById('passo').value;
     
     if (inicio < fim && inicio > 0 && fim > 0 && passo > 0){
-        console.log(`crescente`)
+        //crescente
         mensagem.innerHTML = ` Início ➡ `
 
         for(let i=Number(inicio);i<=Number(fim);i+=Number(passo)){
@@ -21,7 +21,7 @@ function clicarContar(){
         mensagem.innerHTML += ` 🏁 Fim `
     }
     else if(inicio > fim && inicio > 0 && fim > 0 && passo > 0){
-        console.log(`decrescente`)
+        //decrescente
         mensagem.innerHTML = ` Início ➡ `
 
         for(let i=Number(inicio);i>=Number(fim);i-=Number(passo)){
